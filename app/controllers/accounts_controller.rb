@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
   def show
     @latest_bank_transactions = @account.bank_transactions
                                         .order('bank_transactions.created_at DESC').last(10)
-    render json: [@account, @latest_bank_transactions].as_json
+    render json: @account.attributes.merge(transactions: @latest_bank_transactions)
   end
 
   private
