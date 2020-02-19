@@ -1,0 +1,16 @@
+AllCops:
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'Rakefile'
+Metrics/LineLength:
+  Max: 100
+Style/ClassAndModuleChildren:
+  Enabled: false
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+Metrics/BlockLength:
+  ExcludedMethods: ['describe']
+    
