@@ -5,7 +5,7 @@ AllCops:
     - 'config/**/*'
     - 'Gemfile'
     - 'Rakefile'
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
 Style/ClassAndModuleChildren:
   Enabled: false
@@ -13,4 +13,8 @@ Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
+Metrics/MethodLength:
+  Max: 15
+Metrics/AbcSize:
+  Max: 20
     
