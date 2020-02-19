@@ -12,6 +12,7 @@ class TransactionService
     @credit_account = Account.find(@credit_account_id)
     @debit_account = Account.find(@debit_account_id)
 
+    return 'same_account' if check_accounts
     return 'insufficient_balance' if insufficient_balance_of_credit_account
 
     begin
@@ -26,6 +27,10 @@ class TransactionService
   end
 
   private
+
+  def check_accounts
+    @credit_account == @debit_account
+  end
 
   def insufficient_balance_of_credit_account
     @credit_account.balance < @amount

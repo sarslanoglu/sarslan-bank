@@ -15,6 +15,15 @@ RSpec.describe BankTransactionsController, type: :controller do
       expect(response).to have_http_status(:created)
     end
 
+    it 'shows same_account error' do
+      account = create(:account)
+      post :create, params: { debit_account_id: account.id,
+                              credit_account_id: account.id,
+                              amount: 1260.82 }
+
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+
     it 'shows insufficient_balance error' do
       debit_account = create(:account)
       credit_account = create(:account)
