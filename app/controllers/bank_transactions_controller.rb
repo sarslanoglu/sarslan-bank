@@ -3,8 +3,8 @@
 # For creating bank transaction
 class BankTransactionsController < ApplicationController
   def create
-    if params[:debit_account_id].present? &
-       params[:credit_account_id].present? &
+    if params[:debit_account_id].present? &&
+       params[:credit_account_id].present? &&
        params[:amount].present?
       create_transaction(params)
     else
