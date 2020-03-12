@@ -1,10 +1,14 @@
+## Description
+
+The application performs basic banking operations like money transfers and showing of current account balance. You can transfer money between accounts and can see balance of an account.
+
 ## Install
 
 ### Clone the repository
 
 ```shell
 git clone git@github.com:sarslanoglu/sarslan-bank.git
-cd project
+cd sarslan-bank
 ```
 
 ### Check your Ruby version
