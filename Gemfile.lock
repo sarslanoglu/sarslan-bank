@@ -126,9 +126,9 @@ GEM
     pg (1.2.3)
     pg (1.2.3-x64-mingw32)
     pg (1.2.3-x86-mingw32)
-    puma (4.3.7)
+    puma (5.1.1)
       nio4r (~> 2.0)
-    puma (4.3.7-java)
+    puma (5.1.1-java)
       nio4r (~> 2.0)
     racc (1.5.2)
     racc (1.5.2-java)
@@ -255,7 +255,7 @@ DEPENDENCIES
   factory_bot_rails
   listen (>= 3.0.5, < 3.5)
   pg (~> 1.2.3)
-  puma (~> 4.3)
+  puma (~> 5.1)
   rails (~> 6.1.1)
   rails-controller-testing
   rspec-rails
